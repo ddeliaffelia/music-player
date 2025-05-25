@@ -67,13 +67,18 @@ Purchased components, started my research for the software part, worked on a KiC
 
 ### Week 5 - 11 May
 Set up my components, focusing on the 2 Picos (connected and tested the target and debug microcontrollers). Started testing code for my components
+
 ![hardware0.webp](hardware0.webp)
 
 ### Week 12 - 18 May
 Purchased more components after finding out about some possible errors (a 9V battery, DC cable, DAC) and set them up (except for the DAC that will arrive on the 19th). Focused on the software after assembling my components
+
 ![hardware1.webp](hardware1.webp)
 
 ### Week 19 - 25 May
+Finally set up the DAC... which is apparently not the right one... **but** the LCD displays text, the buttons and the potentiometer work, and white noise can be heard through the speaker (which is not the final result, but it is a good sign). The SD card can be read, all left to be done in the next 3 days is to actually make the buttons and potentiometer functional (interact with the files) and figure out what to do about the DAC situation
+
+![hardware2.webp](hardware2.webp)
 
 ## Hardware
 
@@ -116,7 +121,10 @@ The format is
 | [embassy-executor](https://crates.io/crates/embassy-executor) | async/await executor  | Used for asynchronous programming |
 | [defmt](https://docs.rs/defmt/latest/defmt/) | Highly efficient logging framework | Used for debugging |
 | [cortex-m](https://crates.io/crates/cortex-m) | Low-level access to Cortex-M processors | Used for accesing Cortex-M processor |
-| [lcd-lcm1602-i2c](https://crates.io/crates/lcd-lcm1602-i2c) | Driver for LCD1602 | Used to control the display |
+| [ag-lcd](https://crates.io/crates/ag-lcd) | Driver for the LCD | Used to control the display |
+| [port_expander](https://crates.io/crates/port-expander) | Abstraction for I2C port-expanders | Used for the display |
+| [embedded_sdmmc](https://crates.io/crates/embedded-sdmmc/0.4.0) | A basic SD/MMC driver for Embedded Rust | Used for the SD reader |
+| [embassy-time](https://crates.io/crates/embassy-time) | Instant and Duration for embedded no-std systems | Used for timekeeping, delays and timeouts |
 <!-- | [rodio](https://link) | USAGE | Used for ... |
 | [name](https://link) | USAGE | Used for ... | -->
 
@@ -124,4 +132,7 @@ The format is
 
 <!-- Add a few links that inspired you and that you think you will use for your project -->
 
-1. [Project Radio fm](https://www.optimusdigital.ro/ro/content/9-proiect-radio-fm)
+1. [ttps://www.optimusdigital.ro/ro/content/9-proiect-radio-fm](https://www.optimusdigital.ro/ro/content/9-proiect-radio-fm)
+2. [https://doc.rust-lang.org/std/fs/struct.File.html](https://doc.rust-lang.org/std/fs/struct.File.html)
+3. [https://github.com/UPB-PMRust/questions/issues/32](https://github.com/UPB-PMRust/questions/issues/32)
+4. [https://pico.implrust.com/sdcard/read-sdcard.html](https://pico.implrust.com/sdcard/read-sdcard.html)
